@@ -1,9 +1,5 @@
-import Button from "@/components/ui/button";
+import NewQuizButton from "@/components/new-quiz-button";
 
 export default function QuizesPage() {
-  return (
-    <div className="w-full flex flex-col items-end">
-      <Button>New quiz +</Button>
-    </div>
-  );
+  return <NewQuizButton />;
 }
