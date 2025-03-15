@@ -1,5 +1,10 @@
+import Button from "@/components/ui/button";
 import React from "react";
 
 export default function QuizesPage() {
-  return <div>QuizesPage</div>;
+  return (
+    <div>
+      <Button></Button>
+    </div>
+  );
 }
