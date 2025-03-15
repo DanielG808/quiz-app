@@ -1,3 +1,3 @@
 export default function HeaderNav() {
-  return <div>HeaderNav</div>;
+  return <nav className="pr-32">HeaderNav</nav>;
 }
