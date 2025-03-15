@@ -2,6 +2,7 @@ import H1 from "../H1";
 import Button from "./button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
+import NewQuizForm from "../new-quiz-form";
 
 type DialogBoxProps = {
   closeDialog: () => void;
@@ -20,6 +21,7 @@ export default function DialogBox({ closeDialog }: DialogBoxProps) {
           </Button>
         </div>
         <H1 className="text-2xl">Create a New Quiz:</H1>
+        <NewQuizForm />
       </div>
     </section>
   );
