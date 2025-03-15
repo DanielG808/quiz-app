@@ -1,5 +1,9 @@
 import React from "react";
 
-export default function Button() {
-  return <button>button</button>;
+type ButtonProps = {
+  children: React.ReactNode;
+};
+
+export default function Button({ children }: ButtonProps) {
+  return <button className="hover:cursor-pointer">{children}</button>;
 }
