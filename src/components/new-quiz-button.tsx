@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Button from "./ui/button";
+import DialogBox from "./ui/dialog-box";
 
 export default function NewQuizButton() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -14,7 +15,7 @@ export default function NewQuizButton() {
     <div className="w-full flex flex-col items-end pt-4 pr-4">
       <Button onClick={openDialog}>New quiz +</Button>
 
-      {isDialogOpen && <Button onClick={closeDialog}>X</Button>}
+      {isDialogOpen && <DialogBox closeDialog={closeDialog} />}
     </div>
   );
 }
