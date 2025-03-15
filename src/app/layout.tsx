@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import PageContentContainer from "@/components/page-content-container";
 
 const inter = Inter({
   variable: "--font-geist-sans",
@@ -25,7 +26,9 @@ export default function RootLayout({
         className={`${inter.variable} antialiased flex flex-col min-h-screen`}
       >
         <Header />
-        <main className="flex flex-grow">{children}</main>
+        <main className="flex flex-grow justify-center">
+          <PageContentContainer>{children}</PageContentContainer>
+        </main>
         <Footer />
       </body>
     </html>
