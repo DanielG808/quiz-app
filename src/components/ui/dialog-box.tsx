@@ -15,7 +15,7 @@ export default function DialogBox({ closeDialog }: DialogBoxProps) {
         <div className="flex justify-end items-center">
           <Button
             onClick={closeDialog}
-            className="text-md bg-white text-black/65 p-0 hover:text-black hover:bg-white"
+            className="text-sm bg-white text-black/65 p-0 hover:text-black hover:bg-white transition-all duration-200"
           >
             <FontAwesomeIcon icon={faX} />
           </Button>
