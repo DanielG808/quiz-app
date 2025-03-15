@@ -6,5 +6,9 @@ type NavLinkProps = {
 };
 
 export default function NavLink({ path, name }: NavLinkProps) {
-  return <Link href={path}>{name}</Link>;
+  return (
+    <Link href={path} className="text-xl">
+      {name}
+    </Link>
+  );
 }
