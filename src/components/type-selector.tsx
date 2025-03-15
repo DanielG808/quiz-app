@@ -1,3 +1,4 @@
+import { quizTypes } from "@/lib/constants/quizTypes";
 import RadioButton from "./ui/radio-button";
 
 export default function TypeSelector() {
@@ -5,8 +6,9 @@ export default function TypeSelector() {
     <div className="py-3 flex flex-col">
       <label htmlFor="">Quiz Type:</label>
       <div className="flex items-center pt-2">
-        <RadioButton type="Flashcard" />
-        <RadioButton type="Multiple Choice" />
+        {quizTypes.map((type) => (
+          <RadioButton key={type} type={type} />
+        ))}
       </div>
     </div>
   );

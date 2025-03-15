@@ -1,5 +1,7 @@
+import { quizTypes } from "@/lib/constants/quizTypes";
+
 type RadioButtonProps = {
-  type: "Flashcard" | "Multiple Choice";
+  type: (typeof quizTypes)[number];
 };
 
 export default function RadioButton({ type }: RadioButtonProps) {
