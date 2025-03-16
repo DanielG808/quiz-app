@@ -2,7 +2,8 @@ import FormInputOrTextarea from "./form-input-or-textarea";
 import TypeSelector from "./type-selector";
 import Button from "./ui/button";
 
-const handleSubmit = () => {
+const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
+  e.preventDefault();
   console.log("Form submitted.");
 };
 

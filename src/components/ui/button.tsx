@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils/cn";
 
 type ButtonProps = {
   type?: "button" | "submit" | "reset";
-  onClick: () => void;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   children: React.ReactNode;
   className?: string;
 };

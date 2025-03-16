@@ -10,7 +10,6 @@ export default function NewQuizButton() {
   const openDialog = () => setIsDialogOpen(true);
   const closeDialog = () => setIsDialogOpen(false);
 
-  console.log(isDialogOpen);
   return (
     <div className="w-full flex flex-col items-end pt-4 pr-4">
       <Button onClick={openDialog}>New quiz +</Button>
