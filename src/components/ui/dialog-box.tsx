@@ -1,14 +1,13 @@
-import H1 from "../H1";
 import Button from "./button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
-import NewQuizForm from "../new-quiz-form";
 
 type DialogBoxProps = {
   closeDialog: () => void;
+  children: React.ReactNode;
 };
 
-export default function DialogBox({ closeDialog }: DialogBoxProps) {
+export default function DialogBox({ closeDialog, children }: DialogBoxProps) {
   return (
     <section className="fixed inset-0 flex justify-center items-center bg-black/55 z-50">
       <div className="bg-white w-1/3 rounded-md p-4">
@@ -20,8 +19,7 @@ export default function DialogBox({ closeDialog }: DialogBoxProps) {
             <FontAwesomeIcon icon={faX} />
           </Button>
         </div>
-        <H1 className="text-2xl">Create a New Quiz:</H1>
-        <NewQuizForm />
+        {children}
       </div>
     </section>
   );
