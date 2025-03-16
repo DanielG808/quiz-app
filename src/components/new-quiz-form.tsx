@@ -1,5 +1,10 @@
 import FormInputOrTextarea from "./form-input-or-textarea";
 import TypeSelector from "./type-selector";
+import Button from "./ui/button";
+
+const handleSubmit = () => {
+  console.log("Form submitted.");
+};
 
 export default function NewQuizForm() {
   return (
@@ -11,6 +16,9 @@ export default function NewQuizForm() {
         id="description"
         label="Description"
       />
+      <Button type="submit" onClick={handleSubmit} className="mt-3">
+        Create Quiz
+      </Button>
     </form>
   );
 }
