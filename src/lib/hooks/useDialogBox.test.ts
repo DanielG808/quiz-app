@@ -17,5 +17,14 @@ describe("useDialogBox Hook", () => {
     expect(result.current.isDialogOpen).toBe(true);
   });
 
-  test("should close dialog when closeDialog is called", () => {});
+  test("should close dialog when closeDialog is called", () => {
+    const { result } = renderHook(useDialogBox);
+
+    act(() => {
+      result.current.openDialog();
+      result.current.closeDialog();
+    });
+
+    expect(result.current.isDialogOpen).toBe(false);
+  });
 });
