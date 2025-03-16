@@ -1,10 +1,10 @@
 import CardNavigator from "./card-navigator";
-import FlashCard from "./flash-card";
+import FlashCardCreator from "./flash-card-creator";
 
-export default function QuizCreator() {
+export default function FlashCardQuiz() {
   return (
     <section className="border-1 border-primary/25 bg-primary/15 rounded-md m-20 shadow-lg p-10">
-      <FlashCard />
+      <FlashCardCreator />
       <CardNavigator />
     </section>
   );

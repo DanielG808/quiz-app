@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function CardNavigator() {
   return (
-    <div className="w-full flex justify-end space-x-3 pt-4 ">
-      <div className="text-black/65 hover:text-black">
+    <div className="w-full flex justify-end space-x-3 pt-4">
+      <button className="text-black/65 hover:text-black hover:cursor-pointer transition-all duration-200">
         <FontAwesomeIcon icon={faArrowLeft} />
-      </div>
-      <div className="text-black/65 hover:text-black">
+      </button>
+      <button className="text-black/65 hover:text-black hover:cursor-pointer transition-all duration-200">
         <FontAwesomeIcon icon={faArrowRight} />
-      </div>
+      </button>
     </div>
   );
 }
