@@ -32,4 +32,27 @@ describe("useOnClickOutside Hook", () => {
 
     document.body.removeChild(div);
   });
+
+  test("should not call the handler when clicking inside the ref element", () => {
+    const div = document.createElement("div");
+    document.body.appendChild(div);
+
+    ref.current = div;
+
+    renderHook(() => useOnClickOutside(ref, handler));
+
+    act(() => {
+      const insideEvent = new MouseEvent("mousedown", {
+        bubbles: true,
+        cancelable: true,
+        clientX: 10,
+        clientY: 10,
+      });
+      div.dispatchEvent(insideEvent);
+    });
+
+    expect(handler).not.toHaveBeenCalled();
+
+    document.body.removeChild(div);
+  });
 });
