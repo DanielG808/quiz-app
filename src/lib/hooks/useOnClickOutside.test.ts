@@ -55,4 +55,35 @@ describe("useOnClickOutside Hook", () => {
 
     document.body.removeChild(div);
   });
+
+  test("should handle multiple outside clicks", () => {
+    const div = document.createElement("div");
+    document.body.appendChild(div);
+
+    ref.current = div;
+
+    renderHook(() => useOnClickOutside(ref, handler));
+
+    act(() => {
+      const outsideEvent1 = new MouseEvent("mousedown", {
+        bubbles: true,
+        cancelable: true,
+        clientX: 0,
+        clientY: 0,
+      });
+      document.body.dispatchEvent(outsideEvent1);
+
+      const outsideEvent2 = new MouseEvent("mousedown", {
+        bubbles: true,
+        cancelable: true,
+        clientX: 0,
+        clientY: 100,
+      });
+      document.body.dispatchEvent(outsideEvent2);
+    });
+
+    expect(handler).toHaveBeenCalledTimes(2);
+
+    document.body.removeChild(div);
+  });
 });
