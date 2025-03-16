@@ -1,5 +1,5 @@
-import React from "react";
+import NewQuizButton from "@/components/new-quiz-button";
 
 export default function QuizesPage() {
-  return <div>QuizesPage</div>;
+  return <NewQuizButton />;
 }

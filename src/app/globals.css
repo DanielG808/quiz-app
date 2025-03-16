@@ -4,13 +4,16 @@
   --background: oklch(0.982 0.018 155.826);
   --primary: oklch(0.723 0.219 149.579);
   --foreground: #000000;
+  --left-right-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.1),
+    -8px 0 8px -8px rgba(0, 0, 0, 0.1);
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --font-sans: var(--font-inter);
+
+  --shadow-left-right: var(--left-right-shadow);
 }
 
 /* dark mode color scheme */
@@ -24,5 +27,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
