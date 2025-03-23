@@ -11,7 +11,7 @@ type CardNavigatorProps = {
 
 export default function CardNavigator({ handleFlip }: CardNavigatorProps) {
   return (
-    <div className="w-full flex justify-end space-x-4 pt-4 ">
+    <div className="w-full flex justify-end space-x-4">
       <button className="text-black/65 hover:text-black hover:cursor-pointer transition-all duration-200">
         <FontAwesomeIcon icon={faArrowLeft} />
       </button>
