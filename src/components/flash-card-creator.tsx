@@ -1,10 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
 import CardNavigator from "./card-navigator";
 import { useState } from "react";
-
-// type FlashCardCreatorProps = {
-//   flipped: boolean;
-// };
 
 export default function FlashCardCreator() {
   const [flipped, setFlipped] = useState(false);
