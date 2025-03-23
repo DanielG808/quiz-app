@@ -3,8 +3,19 @@
 import { motion } from "framer-motion";
 import CardNavigator from "./card-navigator";
 import { useState } from "react";
+import { TFlashCard } from "@/lib/types/flashCardType";
 
-export default function FlashCardCreator({ flashcards, setCurrentIndex }) {
+type FlashCardCreatorProps = {
+  flashcards: TFlashCard[];
+  handleNext: () => void;
+  handlePrev: () => void;
+};
+
+export default function FlashCardCreator({
+  flashcards,
+  handleNext,
+  handlePrev,
+}: FlashCardCreatorProps) {
   const [flipped, setFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -32,9 +43,9 @@ export default function FlashCardCreator({ flashcards, setCurrentIndex }) {
         </form>
       </motion.figure>
       <CardNavigator
-        flashcards={flashcards}
         handleFlip={handleFlip}
-        setCurrentIndex={setCurrentIndex}
+        handleNext={handleNext}
+        handlePrev={handlePrev}
       />
     </div>
   );

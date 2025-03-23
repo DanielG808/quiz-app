@@ -7,21 +7,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type CardNavigatorProps = {
   handleFlip: () => void;
+  handleNext: () => void;
+  handlePrev: () => void;
 };
 
 export default function CardNavigator({
-  flashcards,
   handleFlip,
-  setCurrentIndex,
+  handleNext,
+  handlePrev,
 }: CardNavigatorProps) {
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % flashcards.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? flashcards.length - 1 : prev - 1));
-  };
-
   return (
     <div className="w-full flex justify-end space-x-4">
       <button

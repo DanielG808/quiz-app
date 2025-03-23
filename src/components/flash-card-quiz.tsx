@@ -13,12 +13,21 @@ const flashcards = [
 export default function FlashCardQuiz() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % flashcards.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? flashcards.length - 1 : prev - 1));
+  };
+
   return (
     <section className="border-1 border-primary/25 bg-primary/15 rounded-md m-20 shadow-lg p-10 space-y-4">
       <FlashCardSelector flashcards={flashcards} currentIndex={currentIndex} />
       <FlashCardCreator
         flashcards={flashcards}
-        setCurrentIndex={setCurrentIndex}
+        handleNext={handleNext}
+        handlePrev={handlePrev}
       />
     </section>
   );
