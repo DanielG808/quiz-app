@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils/cn";
 
-export default function FlashCardChip({ className }) {
+export default function FlashCardChip({ flashcard, className }) {
   return (
     <article
       className={cn(

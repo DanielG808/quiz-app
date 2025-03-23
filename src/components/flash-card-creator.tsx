@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import CardNavigator from "./card-navigator";
 import { useState } from "react";
 
-export default function FlashCardCreator() {
+export default function FlashCardCreator({ flashcards, setCurrentIndex }) {
   const [flipped, setFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -31,7 +31,11 @@ export default function FlashCardCreator() {
           <textarea className="border-b border-black text-center focus:outline-none " />
         </form>
       </motion.figure>
-      <CardNavigator handleFlip={handleFlip} />
+      <CardNavigator
+        flashcards={flashcards}
+        handleFlip={handleFlip}
+        setCurrentIndex={setCurrentIndex}
+      />
     </div>
   );
 }
