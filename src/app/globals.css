@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "tailwind-scrollbar";
 
 :root {
   --background: oklch(0.982 0.018 155.826);

@@ -8,6 +8,12 @@ const flashcards = [
   { index: 0, front: "Card 1 Front", back: "Card 1 Back" },
   { index: 1, front: "Card 2 Front", back: "Card 2 Back" },
   { index: 2, front: "Card 3 Front", back: "Card 3 Back" },
+  { index: 0, front: "Card 1 Front", back: "Card 1 Back" },
+  { index: 1, front: "Card 2 Front", back: "Card 2 Back" },
+  { index: 2, front: "Card 3 Front", back: "Card 3 Back" },
+  { index: 0, front: "Card 1 Front", back: "Card 1 Back" },
+  { index: 1, front: "Card 2 Front", back: "Card 2 Back" },
+  { index: 2, front: "Card 3 Front", back: "Card 3 Back" },
 ];
 
 export default function FlashCardQuiz() {
