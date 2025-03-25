@@ -11,8 +11,8 @@ export default function FlashCardSelector({
   currentIndex,
 }: FlashCardSelectorProps) {
   return (
-    <aside className="border border-primary/25 bg-background flex space-x-2 transition-all duration-200 rounded-md max-w-[600px] overflow-hidden">
-      <div className="flex overflow-x-scroll">
+    <aside className="border border-primary/25 bg-background flex space-x-2 rounded-md max-w-[600px] overflow-hidden shadow-sm">
+      <div className="flex overflow-x-scroll scrollbar scrollbar-thumb-primary/45 scrollbar-thumb-rounded-md scrollbar-hover:bg-primary/65">
         {flashcards.map((flashcard) => (
           <FlashCardChip
             key={flashcard.index}
